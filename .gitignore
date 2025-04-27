@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# Log files
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# React Native
+.expo/
+*.expo/
+
+
+
+# Optional: MacOS Finder directory
+.DS_Store

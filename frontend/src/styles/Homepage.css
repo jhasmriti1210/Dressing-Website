@@ -1,0 +1,184 @@
+.image1 {
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:animate-floatImage {
+        animation: floatImage 6s ease-in-out infinite;
+    }
+}
+
+/* Define the initial state of the book image */
+.book-image {
+    perspective: 400px;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s ease;
+    margin-top: 6rem;
+    margin-right: -5rem;
+}
+
+/* Apply the rotation when hovering */
+.book-image:hover {
+    transform: rotateY(-40deg);
+    /* Rotate effect on hover */
+}
+
+/* Define the rotation animation (Remove if not needed) */
+@keyframes Animation {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(-40deg);
+    }
+}
+
+/* Front cover of the book */
+.book-image> :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darkblue;
+    width: 230px;
+    height: 300px;
+    transform: translateZ(25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 5px 5px 20px #666;
+}
+
+/* Side of the book */
+.book-image::before {
+    position: absolute;
+    content: ' ';
+    background-color: blue;
+    left: 0;
+    top: 3px;
+    width: 48px;
+    height: 294px;
+    transform: translateX(172px) rotateY(90deg);
+    background: linear-gradient(90deg,
+            #fff 0%,
+            #f9f9f9 5%,
+            #fff 10%,
+            #f9f9f9 15%,
+            #fff 20%,
+            #f9f9f9 25%,
+            #fff 30%,
+            #f9f9f9 35%,
+            #fff 40%,
+            #f9f9f9 45%,
+            #fff 50%,
+            #f9f9f9 55%,
+            #fff 60%,
+            #f9f9f9 65%,
+            #fff 70%,
+            #f9f9f9 75%,
+            #fff 80%,
+            #f9f9f9 85%,
+            #fff 90%,
+            #f9f9f9 95%,
+            #fff 100%);
+}
+
+/* Back cover of the book */
+.book-image::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 200px;
+    height: 300px;
+    transform: translateZ(-25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: -10px 0 50px 10px #666;
+}
+
+/* Media Query to disable floating but allow rotation */
+
+.book-image {
+    perspective: none;
+    transform-style: flat;
+    margin-top: 2rem;
+    margin-right: 0;
+
+}
+
+.book-image:hover {
+    transform: rotateY(-40deg);
+    /* Rotate effect on hover */
+}
+
+
+
+
+
+.scrollbar-hide {
+    overflow: -moz-scrollbars-none;
+    /* For Firefox */
+    scrollbar-width: none;
+    /* For Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+
+
+/*footer*/
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Container for scrolling */
+.scroll-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Content that scrolls */
+.scroll-content {
+    display: flex;
+    width: 300%;
+    animation: scroll 30s linear infinite;
+    /* Adjust timing as needed */
+}
+
+.scroll-content>div {
+    min-width: 32px;
+}
+
+
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
