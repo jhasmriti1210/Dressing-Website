@@ -137,7 +137,7 @@ const HomePage = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 overflow-hidden">
-                    {products.slice(0, 8).map((p) => (
+                    {products?.slice(0, 8).map((p) => (
                         <div
                             key={p.id}
                             className="flex flex-col items-center p-4 shadow-md rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
