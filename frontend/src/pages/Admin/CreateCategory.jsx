@@ -92,25 +92,25 @@ const CreateCategory = () => {
   return (
     <Layout title={"Dashboard - Create Category"}>
       <div
-        className="min-h-screen bg-pink-100 p-6 pt-36 mt-24"
+        className="bg-pink-100 pt-28 pb-6 px-4 md:px-6"
         style={{
           background: "linear-gradient(to right, #ffecd2, #fcb69f)",
           minHeight: "100vh",
-          marginTop: "80px",
+          marginTop: "80px", // This is the key change: adds margin top to avoid overlap with header
         }}
       >
-        <div className="flex w-full md:flex-row gap-8 container mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 container mx-auto">
           {/* Left Sidebar */}
-          <div className="">
-            <div className="bg-white w-full p-8 rounded-xl shadow-lg border border-gray-200">
+          <div className="w-full md:w-1/4">
+            <div className="bg-white w-full p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
               <AdminMenu />
             </div>
           </div>
 
           {/* Right Content */}
-          <div className="md:w-3/4 w-full flex flex-col gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-              <h1 className="text-4xl font-bold text-center md:text-left mb-6 text-black">
+          <div className="w-full md:w-3/4 flex flex-col gap-8">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+              <h1 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-6 text-black">
                 Manage Categories
               </h1>
 
@@ -125,15 +125,15 @@ const CreateCategory = () => {
             </div>
 
             {/* Categories Table */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 overflow-x-auto w-full">
-              <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 w-full overflow-x-auto">
+              <h2 className="text-2xl font-semibold text-gray-700 mb-6 text-center md:text-left">
                 All Categories
               </h2>
-              <table className="min-w-full text-center">
+              <table className="min-w-full text-center text-sm">
                 <thead>
-                  <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
-                    <th className="py-3 px-6">Name</th>
-                    <th className="py-3 px-6">Actions</th>
+                  <tr className="bg-gray-100 text-gray-600 uppercase text-xs md:text-sm leading-normal">
+                    <th className="py-3 px-4 md:px-6">Name</th>
+                    <th className="py-3 px-4 md:px-6">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -142,10 +142,10 @@ const CreateCategory = () => {
                       key={c._id}
                       className="border-b border-gray-200 hover:bg-gray-50 transition-all duration-200"
                     >
-                      <td className="py-3 px-6">{c.name}</td>
-                      <td className="py-3 px-6 space-x-2">
+                      <td className="py-3 px-4 md:px-6">{c.name}</td>
+                      <td className="py-3 px-4 md:px-6 space-x-2">
                         <button
-                          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                          className="bg-blue-500 text-white text-xs md:text-sm px-3 md:px-4 py-2 rounded hover:bg-blue-600 transition"
                           onClick={() => {
                             setVisible(true);
                             setUpdatedName(c.name);
@@ -155,7 +155,7 @@ const CreateCategory = () => {
                           Edit
                         </button>
                         <button
-                          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                          className="bg-red-500 text-white text-xs md:text-sm px-3 md:px-4 py-2 rounded hover:bg-red-600 transition"
                           onClick={() => handleDelete(c._id)}
                         >
                           Delete

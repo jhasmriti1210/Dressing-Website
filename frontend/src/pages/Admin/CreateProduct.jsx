@@ -74,15 +74,17 @@ const CreateProduct = () => {
         style={{
           background: "linear-gradient(to right, #ffecd2, #fcb69f)",
           minHeight: "100vh",
-          marginTop: "80px",
+          marginTop: "80px", // Adjust the margin-top to avoid header overlap
         }}
       >
         <div className="row">
-          <div className="col-md-3">
+          {/* Left Sidebar */}
+          <div className="col-md-3 col-12 mb-4 mb-md-0">
             <AdminMenu />
           </div>
 
-          <div className="col-md-9">
+          {/* Right Content */}
+          <div className="col-md-9 col-12">
             <div
               className="card shadow-lg p-4"
               style={{
