@@ -92,7 +92,7 @@ const Header = () => {
 
       {/* Main Navbar with Scroll Feature Only on Home Page */}
       <nav
-        className={`font-medium text-black h-20 fixed w-full z-40 transition-all duration-300 ${isScrolled || !isHomePage ? "bg-white  top-0 flex justify-center items-center" : "bg-transparent top-[40px]"}`}
+        className={`font-medium text-white h-20 fixed w-full z-40 transition-all duration-300 ${isScrolled || !isHomePage ? "bg-black  top-0 flex justify-center items-center" : "bg-transparent top-[40px]"}`}
       >
         <div className="container mx-auto px-4 md:px-24">
           <div className="flex justify-between items-center py-2">
@@ -100,7 +100,7 @@ const Header = () => {
             <div className="flex-shrink-0">
               <Link to="/">
                 <img
-                  src="../logo/logomk.png"
+                  src="../logo/logom.png"
                   alt="Brand-logo"
                   className="h-20 md:h-24 lg:h-16 w-auto mt-2"
                 />
@@ -110,12 +110,12 @@ const Header = () => {
             {/* Navbar Links */}
             <div className="flex-grow flex justify-start ">
               <div className="hidden md:flex space-x-8 ml-16 items-center">
-                <Link to="/" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-black" : "text-white"}`}>Home</Link>
-                <Link to="/store" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-black" : "text-white"}`}>Products</Link>
+                <Link to="/" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-white" : "text-white"}`}>Home</Link>
+                <Link to="/store" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-white" : "text-white"}`}>Products</Link>
                 <Dropdown overlay={categoryMenu} trigger={["click"]}>
-                  <Link className={`md:text-lg cursor-pointer font-sans ${isScrolled || !isHomePage ? "text-black" : "text-white"}`}>Category</Link>
+                  <Link className={`md:text-lg cursor-pointer font-sans ${isScrolled || !isHomePage ? "text-white" : "text-white"}`}>Category</Link>
                 </Dropdown>
-                <Link to="/" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-black" : "text-white"}`}>Our Stories</Link>
+                <Link to="/" className={`md:text-lg font-sans ${isScrolled || !isHomePage ? "text-white" : "text-white"}`}>Our Stories</Link>
               </div>
             </div>
 
